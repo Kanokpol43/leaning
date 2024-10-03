@@ -1,5 +1,5 @@
 describe("Test4", () => {
-  it("Handling Child Windows", () => {
+  it("Handling Child Tap", () => {
     cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
 
     cy.get("#opentab").invoke("removeAttr", "target").click();
