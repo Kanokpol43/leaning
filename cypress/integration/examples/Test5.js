@@ -1,3 +1,5 @@
+import "cypress-iframe";
+
 describe("Test5", () => {
   it("Handling Child Window", () => {
     cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
@@ -22,5 +24,16 @@ describe("Test5", () => {
           cy.contains("Learn More").click();
         });
       });
+  });
+
+  it.only("Handling Frames", () => {
+    cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+
+    cy.frameLoaded("#courses-iframe");
+
+    cy.iframe().find('[href="mentorship"]').eq(0).click();
+
+    cy.wait(2000);
+    cy.iframe().find(".pricing-title").should("have.length", 2);
   });
 });
