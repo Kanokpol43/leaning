@@ -57,7 +57,9 @@ describe("Test5", () => {
     cy.contains("abbr", date).click();
 
     //Assertion
+    // เพื่อดึงค่า input แต่ละตัวที่เกี่ยวข้องกับการเลือกวันที่ (ปี, เดือน, วัน) โดยมาเก็บไว้ใน field และวนลูปแต่ละ element โดยใช้ฟังก์ชัน each()
     cy.get(".react-date-picker__inputGroup__input").each((field, index) => {
+      // ทำการตรวจสอบค่า value มาเทียบกับค่าใน field
       cy.wrap(field).invoke("val").should("eq", result[index]);
     });
   });
