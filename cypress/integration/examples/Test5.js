@@ -36,4 +36,6 @@ describe("Test5", () => {
     cy.wait(2000);
     cy.iframe().find(".pricing-title").should("have.length", 2);
   });
+
+  it("Calendars", () => {});
 });
