@@ -13,13 +13,10 @@ describe("Framework", () => {
     cy.get("#inlineRadio3").should("be.disabled");
   });
 
-  it("", function () {
+  it("Click button dynamic", function () {
     cy.visit("https://rahulshettyacademy.com/angularpractice/");
     cy.get(":nth-child(2) > .nav-link").click();
-    cy.get("h4.card-title").each((title, index) => {
-      if (title.text().includes("Blackberry")) {
-        cy.get(".btn-info").eq(index).click()
-      }
-    });
+
+    cy.selectProduct("Note");
   });
 });
