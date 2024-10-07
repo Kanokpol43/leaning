@@ -1,7 +1,6 @@
 {
   "name": "cypress-automated",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,9 @@
   "devDependencies": {
     "cypress": "^13.14.2",
     "cypress-iframe": "^1.0.1"
+  },
+  "description": "",
+  "dependencies": {
+    "prettier": "^3.3.3"
   }
 }

@@ -43,7 +43,7 @@ describe("Test4", () => {
     cy.contains("Top").click({ force: true });
 
     cy.get(".mouse-hover-content");
-    cy.contains("Top").click();
+    cy.contains("Top").click({force: true});
     cy.url().should("include", "top");
   });
 });
