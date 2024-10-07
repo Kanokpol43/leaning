@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("selectProduct", (productName) => {
+  // หา Element ชื่อ Card-title โดยทำการหาแบบวนลูป จากนั้นเก็บ Value ไว้ใน title
+  cy.get("h4.card-title").each((title, index) => {
+    // ถ้า title มีคำว่า " ... "
+    if (title.text().includes(productName))
+      cy.get(".btn-info").eq(index).click();
+  });
+});

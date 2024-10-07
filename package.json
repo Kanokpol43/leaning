@@ -11,5 +11,8 @@
     "cypress": "^13.14.2",
     "cypress-iframe": "^1.0.1"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "prettier": "^3.3.3"
+  }
 }
