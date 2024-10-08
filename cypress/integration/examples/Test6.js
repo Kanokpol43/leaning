@@ -24,6 +24,8 @@ describe("Framework", () => {
       cy.selectProduct(element);
     });
 
+    // Pause test
+    cy.pause();
     cy.selectProduct("Blackberry");
     cy.selectProduct("Nokia");
   });
